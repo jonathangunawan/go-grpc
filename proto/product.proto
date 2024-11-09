@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "./pb";
+
+import "google/protobuf/empty.proto";
+
+message InsertProductRequest {
+    string name = 1;
+    string description = 2;
+}
+
+message InsertProductResponse {
+    int64 id = 1;
+    string name = 2;
+    string description = 3;
+}
+
+message GetAllProductResponse{
+    repeated Product data = 1;
+}
+
+message Product {
+    int64 id = 1;
+    string name = 2;
+    string description = 3;
+}
+
+service ProductSvc {
+    rpc InsertProduct (InsertProductRequest) returns (InsertProductResponse);
+    rpc GetAllProduct (google.protobuf.Empty) returns (GetAllProductResponse);
+}
