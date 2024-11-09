@@ -6,10 +6,10 @@ This is an example of how to implement gRPC in Go as server and client
 - [ ] Bidirectional RPC
 
 ## Project Specification
-go: 1.22.4
-protobuf: proto3
-protoc-gen-go: v1.35.1
-protoc-gen-go-grpc: v1.5.1
+- go: 1.22.4
+- protobuf: proto3
+- protoc-gen-go: v1.35.1
+- protoc-gen-go-grpc: v1.5.1
 
 ## Notes
 1. At least for now, repository isn't used that much. I just create the layer as an act of consistency :)
